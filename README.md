@@ -15,4 +15,5 @@
 ![分割图片](https://github.com/102757017/Captcha-Segmentation/blob/master/Division.PNG)  
 此时四个字符已近完全分离开了，分别提取最小外接矩形，将倾斜字符校平，结果分别进行保存。  
 ![图片](https://github.com/102757017/Captcha-Segmentation/blob/master/result.PNG)  
-下一步可以使用对分割的字符图片进行降维，然后k-means聚类（确认该验证码用到了多少个字符就聚为几类，K-means算法请参考https://github.com/102757017/basic/blob/master/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E8%81%9A%E7%B1%BB/k-means.py），分别保存到不同的文件夹，聚类可能会有少部分字符分类错误，进行手工修改，完工后就可以作为CNN的训练集了，如此就实现了半监督学习，不用手工去打码了。
+下一步可以使用对分割的字符图片进行降维，然后k-means聚类（确认该验证码用到了多少个字符就聚为几类，K-means算法请参考https://github.com/102757017/basic/blob/master/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E8%81%9A%E7%B1%BB/k-means.py）。  
+分割的图片分别保存到不同的文件夹，聚类可能会有少部分字符分类错误，进行手工修改，完工后就可以作为CNN的训练集了，如此就实现了半监督学习，不用手工去打码了。
